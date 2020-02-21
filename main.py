@@ -114,14 +114,14 @@ def resumable_upload(request):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--file', required=True, help='Video file to upload')
-    parser.add_argument('--title', help='Video title', default='드림쉐이크 테스트')
+    parser.add_argument('--title', help='Video title', default='분석영상 테스트')
     parser.add_argument('--description', help='Video description',
-                        default='Test Description')
+                        default='머신러닝 기반의 이미지 프로세싱')
     parser.add_argument('--category', default='22',
                         help='Numeric video category. ' +
                         'See https://developers.google.com/youtube/v3/docs/videoCategories/list')
     parser.add_argument('--keywords', help='Video keywords, comma separated',
-                        default='농구, 드림쉐이크, 이미지프로세싱, 머신러닝')
+                        default='드림쉐이크, 농구, 이미지프로세싱, 머신러닝')
     parser.add_argument('--privacyStatus', choices=VALID_PRIVACY_STATUSES,
                         default='public', help='Video privacy status.')
     args = parser.parse_args()
